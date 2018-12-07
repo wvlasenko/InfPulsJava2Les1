@@ -18,7 +18,7 @@ public class Program {
 		System.out.println(Ln2);
 		Line Ln3 = new Line(new Point(8, 9), new Point(12, 3));
 		Line Ln4 = new Line(Ln2.getBegin(), Ln3.getEnd());
-		ColorLine cLn1 = new ColorLine(p1,p2,333333);
+		ColorLine cLn1 = new ColorLine(p1, p2, 333333);
 		System.out.println(cLn1);
 		Triangle t1 = new Triangle(new Point(1, 1), new Point(4, 2), new Point(1, 6));
 		Line Ln5 = new Line(2, 1, 4, 3);
@@ -26,13 +26,17 @@ public class Program {
 		Line Ln7 = new Line(2, 1, 2, 4);
 		Triangle t2 = new Triangle(Ln5, Ln6, Ln7);
 		System.out.println(t2);
-		System.out.println( "*******************************************************");
-		Figure[] masObj = new Figure[5];
+		Point[] pnArr = { p1, p2, cp1, new Point(8, 3) };
+		PolyGon pg1 = new PolyGon(pnArr);
+		// System.out.println(pg1);
+		System.out.println("*******************************************************");
+		Figure[] masObj = new Figure[6];
 		masObj[0] = p1;
 		masObj[1] = p2;
 		masObj[2] = Ln1;
 		masObj[3] = Ln4;
 		masObj[4] = t1;
+		masObj[5] = pg1;
 		for (int i = 0; i < masObj.length; i++) {
 			System.out.println(masObj[i]);
 		}
